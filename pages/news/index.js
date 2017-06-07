@@ -6,11 +6,11 @@ Page({
    
   },
   onLoad: function () {
-    var reqKey = '8d9af834b7b4fbf0884737ffba94f7cf';
+    var reqKey = '7a8c9ff80fa08a7ef45f4db0a397e7a4';
     wx.request({
-      url: 'https://v.juhe.cn/toutiao/index', //仅为示例，并非真实的接口地址
+      url: 'https://op.juhe.cn/robot/index', //仅为示例，并非真实的接口地址
       data: {
-        type:'top',
+        info:'您好',
         key:reqKey
       },
       header: {
