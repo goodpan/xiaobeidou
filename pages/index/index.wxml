@@ -1,0 +1,85 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="flex-wrp" >
+    <view class="flex-item" bindtap="toNews">
+      <icon type="success"/>
+      <text>新闻头条</text>
+    </view>
+    <view class="flex-item">
+      <icon type="success"/>
+      <text>笑话大全</text>
+    </view>
+     <view class="flex-item">
+      <icon type="success"/>
+      <text>NBA赛事</text>
+    </view>
+     <view class="flex-item">
+      <icon type="success"/>
+      <text>足球赛事</text>
+    </view>
+      <view class="flex-item">
+      <icon type="success"/>
+      <text>足球赛事</text>
+    </view>
+    <view class="flex-item">
+      <icon type="success"/>
+      <text>足球赛事</text>
+    </view>
+    <view class="flex-item">
+      <icon type="success"/>
+      <text>足球赛事</text>
+    </view>
+    <view class="flex-item">
+      <icon type="success"/>
+      <text>足球赛事</text>
+    </view>
+    <view class="flex-item">
+      <icon type="success"/>
+      <text>足球赛事</text>
+    </view>
+    <view class="flex-item">
+      <icon type="success"/>
+      <text>足球赛事</text>
+    </view>
+    <view class="flex-item">
+      <icon type="success"/>
+      <text>足球赛事</text>
+    </view>
+    <view class="flex-item">
+      <icon type="success"/>
+      <text>足球赛事</text>
+    </view>
+    <view class="flex-item">
+      <icon type="success"/>
+      <text>足球赛事</text>
+    </view>
+    <view class="flex-item">
+      <icon type="success"/>
+      <text>足球赛事</text>
+    </view>
+    <view class="flex-item">
+      <icon type="success"/>
+      <text>足球赛事</text>
+    </view>
+    <view class="flex-item">
+      <icon type="success"/>
+      <text>足球赛事</text>
+    </view>
+    <view class="flex-item">
+      <icon type="success"/>
+      <text>足球赛事</text>
+    </view>
+    <view class="flex-item">
+      <icon type="success"/>
+      <text>足球赛事</text>
+    </view>
+    <view class="flex-item">
+      <icon type="success"/>
+      <text>足球赛事</text>
+    </view>
+    <view class="flex-item">
+      <icon type="success"/>
+      <text>足球赛事</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,31 @@
+/**index.wxss**/
+.flex-wrp{
+  width:100%;
+  flex-direction:row;
+  display: flex;
+  flex-wrap: wrap; 
+}
+.flex-item{
+  width:25%;
+  height:100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top:1px solid #ccc;
+  border-left:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  font-size: 12px;
+  color: #666;
+  padding: 20px 0;
+  box-sizing:border-box;
+}
+.flex-item:first-child{
+  border-left: 0;
+}
+.flex-item icon,.flex-item text{
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
