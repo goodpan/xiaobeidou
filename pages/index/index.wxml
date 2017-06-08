@@ -1,85 +1,101 @@
 <!--index.wxml-->
 <view class="container">
   <view class="flex-wrp" >
-    <view class="flex-item" bindtap="toNews">
-      <icon type="success"/>
-      <text>新闻头条</text>
+    <view class="flex-item">
+        <image style="width:30px;height:50px" mode="" src="/image/icon/wifi.png"></image>
+        <text>全国WIFI</text>
+      </view>
+    <view class="flex-item">
+      <image style="width:30px;height:50px" mode="" src="/image/icon/bus.png"></image>
+      <text>实时公交</text>
     </view>
     <view class="flex-item">
-      <icon type="success"/>
-      <text>笑话大全</text>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/wepiao.png"></image>
+      <text>在线电影票</text>
+    </view>
+    <view class="flex-item">
+      <image style="width:30px;height:50px" mode="" src="/image/icon/calendar.png"></image>
+      <text>万年历</text>
     </view>
      <view class="flex-item">
-      <icon type="success"/>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/nba.png"></image>
       <text>NBA赛事</text>
     </view>
      <view class="flex-item">
-      <icon type="success"/>
-      <text>足球赛事</text>
-    </view>
-      <view class="flex-item">
-      <icon type="success"/>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/football.png"></image>
       <text>足球赛事</text>
     </view>
     <view class="flex-item">
-      <icon type="success"/>
-      <text>足球赛事</text>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/tv.png"></image>
+      <text>电视节目</text>
     </view>
     <view class="flex-item">
-      <icon type="success"/>
-      <text>足球赛事</text>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/movie.png"></image>
+      <text>影视影讯</text>
+    </view>
+    <view class="flex-item" bindtap="toNews">
+      <image style="width:30px;height:50px" mode="" src="/image/icon/toutiao.png"></image>
+      <text>新闻头条</text>
     </view>
     <view class="flex-item">
-      <icon type="success"/>
-      <text>足球赛事</text>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/joke.png"></image>
+      <text>笑话大全</text>
     </view>
     <view class="flex-item">
-      <icon type="success"/>
-      <text>足球赛事</text>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/rank.png"></image>
+      <text>数字阅读</text>
     </view>
     <view class="flex-item">
-      <icon type="success"/>
-      <text>足球赛事</text>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/dream.png"></image>
+      <text>周公解梦</text>
     </view>
     <view class="flex-item">
-      <icon type="success"/>
-      <text>足球赛事</text>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/mobile.png"></image>
+      <text>号码归属</text>
     </view>
     <view class="flex-item">
-      <icon type="success"/>
-      <text>足球赛事</text>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/constellation.png"></image>
+      <text>星座运势</text>
     </view>
     <view class="flex-item">
-      <icon type="success"/>
-      <text>足球赛事</text>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/goodbook.png"></image>
+      <text>图书电商</text>
     </view>
     <view class="flex-item">
-      <icon type="success"/>
-      <text>足球赛事</text>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/finance.png"></image>
+      <text>货币汇率</text>
     </view>
     <view class="flex-item">
-      <icon type="success"/>
-      <text>足球赛事</text>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/gold.png"></image>
+      <text>黄金数据</text>
     </view>
     <view class="flex-item">
-      <icon type="success"/>
-      <text>足球赛事</text>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/exchange.png"></image>
+      <text>汇率查询</text>
     </view>
     <view class="flex-item">
-      <icon type="success"/>
-      <text>足球赛事</text>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/stock.png"></image>
+      <text>股票查询</text>
     </view>
     <view class="flex-item">
-      <icon type="success"/>
-      <text>足球赛事</text>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/idcard.png"></image>
+      <text>身份证查询</text>
     </view>
     <view class="flex-item">
-      <icon type="success"/>
-      <text>足球赛事</text>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/laohuangli.png"></image>
+      <text>老黄历</text>
     </view>
     <view class="flex-item">
-      <icon type="success"/>
-      <text>足球赛事</text>
+      <image style="width:30px;height:50px" mode="" src="/image/icon/postcode.png"></image>
+      <text>邮编查询</text>
+    </view>
+    <view class="flex-item">
+      <image style="width:30px;height:50px" mode="" src="/image/icon/chengyu.png"></image>
+      <text>成语词典</text>
+    </view>
+    <view class="flex-item">
+      <image style="width:30px;height:50px" mode="" src="/image/icon/xhzd.png"></image>
+      <text>新华字典</text>
     </view>
   </view>
 </view>

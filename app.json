@@ -2,7 +2,31 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/news/index"
+    "pages/news/index",
+    "pages/robot/index",
+    "pages/wxjx/index",
+    "pages/bus/index",
+    "pages/calendar/index",
+    "pages/toutiao/index",
+    "pages/joke/index",
+    "pages/nba/index",
+    "pages/football/index",
+    "pages/tv/index",
+    "pages/movie/index",
+    "pages/rank/index",
+    "pages/dream/index",
+    "pages/mobile/index",
+    "pages/constellation/index",
+    "pages/wifi/index",
+    "pages/goodbook/index",
+    "pages/finance/index",
+    "pages/exchange/index",
+    "pages/stock/index",
+    "pages/idcard/index",
+    "pages/laohuangli/index",
+    "pages/postcode/index",
+    "pages/chengyu/index",
+    "pages/xhzd/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,12 +47,17 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/wxjx/index",
         "iconPath": "image/icon_API.png",
         "selectedIconPath": "image/icon_API_HL.png",
-        "text": "接口"
+        "text": "微信精选"
+      },
+      {
+        "pagePath": "pages/robot/index",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "咨询机器人"
       }
-      
     ]
   }
 }
