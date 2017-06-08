@@ -5,28 +5,63 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+      wifiList:[],
+      latitude:0,
+      longitude:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var _self = this;
+    wx.getLocation({
+      type: 'wgs84',
+      success: function (res) {
+        var latitude = res.latitude
+        var longitude = res.longitude
+        var speed = res.speed
+        var accuracy = res.accuracy
+        _self.setData({
+          latitude: res.latitude,
+          longitude: res.longitude
+        })
+      }
+    })
+    wx.request({
+      url: 'https://apis.juhe.cn/wifi/local',
+      data: {
+        key: '957c9c834b062c702843fbf958df17ae',
+        lon: this.data.longitude,
+        lat: this.data.latitude,
+        gtype: 1,
+        r: 3000
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: (res) => {
+        if (res.data && res.data.resultcode == 200) {
+          _self.setData({
+            wifiList: res.data.result.data
+          })
+        }
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    
   },
 
   /**

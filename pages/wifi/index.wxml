@@ -1,2 +1,7 @@
 <!--index.wxml-->
-<text>index.wxml</text>
+<view>
+  <view  wx:for="{{wifiList}}" class="item" wx:key="item.id">
+      <view class="title">{{item.name}}</view>
+      <view class="intro">{{item.intro}}</view>
+  </view>
+</view>

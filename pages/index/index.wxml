@@ -1,11 +1,11 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="flex-wrp" >
+  <view class="flex-wrp" bindtap="toWifi">
     <view class="flex-item">
         <image style="width:30px;height:50px" mode="" src="/image/icon/wifi.png"></image>
         <text>全国WIFI</text>
       </view>
-    <view class="flex-item">
+    <view class="flex-item" bindtap="toBus">
       <image style="width:30px;height:50px" mode="" src="/image/icon/bus.png"></image>
       <text>实时公交</text>
     </view>

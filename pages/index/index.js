@@ -27,5 +27,15 @@ Page({
     wx.navigateTo({
       url: '../news/index'
     })
+  },
+  toWifi:function(){
+    wx.navigateTo({
+      url: '../wifi/index'
+    })
+  },
+  toBus:function(){
+    wx.navigateTo({
+      url: '../bus/index'
+    })
   }
 })

@@ -5,21 +5,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    busList:[],
+    bus:0
   },
-
+  bindKeyInput: function (e) {
+    this.setData({
+      bus: e.detail.value
+    })
+  },
+  toSearch:function(){
+    console.log(this)
+    var _self = this;
+    wx.request({
+      url: 'https://op.juhe.cn/189/bus/busline',
+      data: {
+        key: 'daaca038d5f6b449590459b61ef661db',
+        city: '厦门',
+        bus: _self.bus
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: (res) => {
+        if (res.data && res.statusCode == 200) {
+          console.log(res.data.result)
+          _self.setData({
+            busList: res.data.result
+          })
+        }
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    
   },
 
   /**
