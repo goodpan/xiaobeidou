@@ -5,16 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    holiday:'',
-    avoid:'',
-    animalsYear:'',
-    desc:'',
-    weekday:'',
-    suit:'',
-    lunarYear:'',
-    lunar:'',
-    yeaMonth:'',
-    date:''
+
   },
 
   /**
@@ -23,18 +14,21 @@ Page({
   onLoad: function (options) {
     var _self = this;
     wx.request({
-      url: 'https://v.juhe.cn/calendar/day',
+      url: 'https://v.juhe.cn/wepiao/query',
       data: {
-        key: '925b85564b7487835ce13c9adc661b16',
-        date: '2012-1-1'
+        key: '414b97fb8e82ce879d90e9aaa7407aa4'
       },
       header: {
         'content-type': 'application/json'
       },
       success: (res) => {
+        console.log(res)
         if (res.data && res.statusCode == 200) {
-          console.log(res.data.result.data)
-          
+          var h5url = res.data.result.h5url;
+          var h5weixin = res.data.result.h5weixin;
+          // wx.navigateTo({
+          //   url: h5url
+          // })
         }
       }
     })
@@ -44,48 +38,48 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })

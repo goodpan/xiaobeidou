@@ -8,31 +8,47 @@ Page({
     busList:[],
     bus:0
   },
-  bindKeyInput: function (e) {
+  bindChange: function (e) {
     this.setData({
       bus: e.detail.value
     })
   },
   toSearch:function(){
-    console.log(this)
     var _self = this;
+    wx.showToast({
+      title: "加载中...",
+      icon: "loading",
+      duration: 5000
+    })
     wx.request({
       url: 'https://op.juhe.cn/189/bus/busline',
       data: {
         key: 'daaca038d5f6b449590459b61ef661db',
         city: '厦门',
-        bus: _self.bus
+        bus: _self.data.bus
       },
       header: {
         'content-type': 'application/json'
       },
       success: (res) => {
+        wx.hideToast()
         if (res.data && res.statusCode == 200) {
-          console.log(res.data.result)
           _self.setData({
             busList: res.data.result
           })
         }
+        if (res.data.error_code){
+          _self.setData({
+            busList: []
+          })
+        }
+      },
+      fail:(res)=>{
+        wx.showToast({
+          title: "未匹配到查询到数据",
+          icon: "loading",
+          duration: 5000
+        })
       }
     })
   },

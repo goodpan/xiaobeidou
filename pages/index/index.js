@@ -37,5 +37,15 @@ Page({
     wx.navigateTo({
       url: '../bus/index'
     })
+  },
+  toWeipiao:function(){
+    wx.navigateTo({
+      url: '../wepiao/index'
+    })
+  },
+  toCalendar:function(){
+    wx.navigateTo({
+      url: '../calendar/index'
+    })
   }
 })

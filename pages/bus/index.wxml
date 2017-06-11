@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view>
   <view class="section">
-  <input placeholder="请输入公交路线" auto-focus bindblur="bindKeyInput"/>
+  <input placeholder="请输入公交路线" auto-focus bindchange="bindChange"/>
   <button bindtap="toSearch">查询</button>
 </view>
   <view  wx:for="{{busList}}" class="item" wx:key="item.id">

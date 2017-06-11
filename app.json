@@ -26,7 +26,8 @@
     "pages/laohuangli/index",
     "pages/postcode/index",
     "pages/chengyu/index",
-    "pages/xhzd/index"
+    "pages/xhzd/index",
+    "pages/wepiao/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
