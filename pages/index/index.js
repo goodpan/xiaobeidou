@@ -47,5 +47,20 @@ Page({
     wx.navigateTo({
       url: '../calendar/index'
     })
+  },
+  toNBA:function(){
+    wx.navigateTo({
+      url: '../nba/index'
+    })
+  },
+  toFootball:function(){
+    wx.navigateTo({
+      url: '../football/index'
+    })
+  },
+  toTV:function(){
+    wx.navigateTo({
+      url: '../tv/index'
+    })
   }
 })

@@ -1,2 +1,4 @@
 <!--index.wxml-->
-<text>index.wxml</text>
+<view>
+  <view>{{key}}</view>
+</view>

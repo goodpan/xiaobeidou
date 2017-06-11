@@ -12,7 +12,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var _self = this;
+    wx.request({
+      url: 'https://japi.juhe.cn/tv/getCategory',
+      data: {
+        key: '92e989bb19508e1325a25ca2f93cc3c3',
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: (res) => {
+        if (res.data && res.statusCode == 200) {
+          console.log(res.data)
+          // _self.setData({
+          //   key: res.data.result.key
+          // })
+        }
+      }
+    })
   },
 
   /**

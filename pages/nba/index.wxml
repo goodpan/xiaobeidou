@@ -1,2 +1,7 @@
 <!--index.wxml-->
-<text>index.wxml</text>
+<view>
+<view>{{title}}</view>
+  <view  wx:for="{{teammatch}}" class="item" wx:key="index">
+      <view>{{item.name}}</view>
+  </view>
+</view>

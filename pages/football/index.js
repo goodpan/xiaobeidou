@@ -5,14 +5,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    key:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var _self = this;
+    wx.request({
+      url: 'https://op.juhe.cn/onebox/football/league',
+      data: {
+        key: '63c8ce8adb5ff5579c1ca42ef86128a4',
+        league:'英超'
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: (res) => {
+        if (res.data && res.statusCode == 200) {
+          console.log(res.data.result)
+          _self.setData({
+            key: res.data.result.key
+          })
+        }
+      }
+    })
   },
 
   /**

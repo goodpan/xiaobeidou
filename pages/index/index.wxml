@@ -17,15 +17,15 @@
       <image style="width:30px;height:50px" mode="" src="/image/icon/calendar.png"></image>
       <text>万年历</text>
     </view>
-     <view class="flex-item">
+     <view class="flex-item" bindtap="toNBA">
       <image style="width:30px;height:50px" mode="" src="/image/icon/nba.png"></image>
       <text>NBA赛事</text>
     </view>
-     <view class="flex-item">
+     <view class="flex-item" bindtap="toFootball">
       <image style="width:30px;height:50px" mode="" src="/image/icon/football.png"></image>
       <text>足球赛事</text>
     </view>
-    <view class="flex-item">
+    <view class="flex-item" bindtap="toTV">
       <image style="width:30px;height:50px" mode="" src="/image/icon/tv.png"></image>
       <text>电视节目</text>
     </view>
