@@ -5,14 +5,40 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    areacode:'',
+    province:'',
+    city:'',
+    company:'',
+    zip:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var _self = this;
+    wx.request({
+      url: 'https://apis.juhe.cn/mobile/get',
+      data: {
+        key: '2d90d7c730c35014f2ee152251024cdd',
+        phone:15860782455
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: (res) => {
+        if (res.data && res.statusCode == 200) {
+          console.log(res.data.result)
+          _self.setData({
+            areacode: res.data.result.areacode,
+            province: res.data.result.province,
+            city: res.data.result.city,
+            company: res.data.result.company,
+            zip: res.data.result.zip
+          })
+        }
+      }
+    })
   },
 
   /**

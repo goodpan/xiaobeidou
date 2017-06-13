@@ -1,2 +1,10 @@
 <!--index.wxml-->
-<text>index.wxml</text>
+<view>
+  <view>{{title}}</view>
+  <image src="{{cover}}"/>
+  <view>{{dir}}</view>
+  <view>{{tag}}</view>
+  <view>{{year}}</view>
+  <view>{{act}}</view>
+  <view>{{desc}}</view>
+</view>

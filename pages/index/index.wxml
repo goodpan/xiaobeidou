@@ -29,31 +29,31 @@
       <image style="width:30px;height:50px" mode="" src="/image/icon/tv.png"></image>
       <text>电视节目</text>
     </view>
-    <view class="flex-item">
+    <view class="flex-item" bindtap="toMovie">
       <image style="width:30px;height:50px" mode="" src="/image/icon/movie.png"></image>
       <text>影视影讯</text>
     </view>
-    <view class="flex-item" bindtap="toNews">
+    <view class="flex-item" bindtap="toToutiao">
       <image style="width:30px;height:50px" mode="" src="/image/icon/toutiao.png"></image>
       <text>新闻头条</text>
     </view>
-    <view class="flex-item">
+    <view class="flex-item" bindtap="toJoke">
       <image style="width:30px;height:50px" mode="" src="/image/icon/joke.png"></image>
       <text>笑话大全</text>
     </view>
-    <view class="flex-item">
+    <view class="flex-item" bindtap="toRank">
       <image style="width:30px;height:50px" mode="" src="/image/icon/rank.png"></image>
       <text>数字阅读</text>
     </view>
-    <view class="flex-item">
+    <view class="flex-item" bindtap="toDream">
       <image style="width:30px;height:50px" mode="" src="/image/icon/dream.png"></image>
       <text>周公解梦</text>
     </view>
-    <view class="flex-item">
+    <view class="flex-item" bindtap="toMobile">
       <image style="width:30px;height:50px" mode="" src="/image/icon/mobile.png"></image>
       <text>号码归属</text>
     </view>
-    <view class="flex-item">
+    <view class="flex-item" bindtap="toConstellation">
       <image style="width:30px;height:50px" mode="" src="/image/icon/constellation.png"></image>
       <text>星座运势</text>
     </view>
@@ -61,7 +61,7 @@
       <image style="width:30px;height:50px" mode="" src="/image/icon/goodbook.png"></image>
       <text>图书电商</text>
     </view>
-    <view class="flex-item">
+    <view class="flex-item" bindtap="toFinance">
       <image style="width:30px;height:50px" mode="" src="/image/icon/finance.png"></image>
       <text>货币汇率</text>
     </view>

@@ -1,2 +1,8 @@
 <!--index.wxml-->
-<text>index.wxml</text>
+<view>
+  <view>{{areacode}}</view>
+  <view>{{province}}{{city}}</view>
+  <view>{{company}}</view>
+  <view>{{zip}}</view>
+</view>
+

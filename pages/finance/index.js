@@ -12,7 +12,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var _self = this;
+    wx.request({
+      url: 'https://web.juhe.cn:8080/finance/exchange/rmbquot',
+      data: {
+        key: '5c6be429d4a41db8a1be95b1976b6bdf',
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: (res) => {
+        if (res.data && res.statusCode == 200) {
+          console.log(res.data.result)
+          // _self.setData({
+
+          // })
+        }
+      }
+    })
   },
 
   /**

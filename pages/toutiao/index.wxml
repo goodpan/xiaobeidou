@@ -1,2 +1,8 @@
 <!--index.wxml-->
-<text>index.wxml</text>
+<view>
+<view></view>
+  <view  wx:for="{{newsList}}" class="item" wx:key="index">
+      <view>{{item.title}}</view>
+      <image src="{{item.thumbnail_pic_s}}"></image>
+  </view>
+</view>

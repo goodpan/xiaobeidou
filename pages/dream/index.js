@@ -12,7 +12,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var _self = this;
+    wx.request({
+      url: 'https://v.juhe.cn/dream/category',
+      data: {
+        key: 'e5f75b25dc8d498246ad93f7bb1df602',
+        fid:3
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: (res) => {
+        if (res.data && res.statusCode == 200) {
+          console.log(res.data)
+          // _self.setData({
+          //   jokeList: res.data.result.data
+          // })
+        }
+      }
+    })
   },
 
   /**

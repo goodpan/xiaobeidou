@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    jokeList:[]
   },
 
   /**
@@ -19,7 +19,28 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    var _self = this;
+    wx.request({
+      url: 'https://japi.juhe.cn/joke/content/list.from',
+      data: {
+        key: '8e7c1acee39a803115f259f11d876e1c',
+        sort:'desc',
+        page:1,
+        pagesize:20,
+        time: 1418816972
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: (res) => {
+        if (res.data && res.statusCode == 200) {
+          console.log(res.data.result.data)
+          _self.setData({
+            jokeList: res.data.result.data
+          })
+        }
+      }
+    })
   },
 
   /**

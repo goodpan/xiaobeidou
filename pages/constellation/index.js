@@ -12,7 +12,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var _self = this;
+    wx.request({
+      url: 'https://web.juhe.cn:8080/constellation/getAll',
+      data: {
+        key: '7addf042f2c24318a581b080162cc9b6',
+        consName:'双鱼座',
+        type:'today'
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: (res) => {
+        if (res.data && res.statusCode == 200) {
+          console.log(res.data.result)
+          // _self.setData({
+           
+          // })
+        }
+      }
+    })
   },
 
   /**

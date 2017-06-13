@@ -1,2 +1,7 @@
 <!--index.wxml-->
-<text>index.wxml</text>
+<view>
+  <view  wx:for="{{jokeList}}" class="item" wx:key="index">
+      <view>{{item.content}}</view>
+      <view>{{item.updatetime}}</view>
+  </view>
+</view>

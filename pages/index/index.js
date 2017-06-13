@@ -62,5 +62,45 @@ Page({
     wx.navigateTo({
       url: '../tv/index'
     })
+  },
+  toMovie:function(){
+    wx.navigateTo({
+      url: '../movie/index'
+    })
+  },
+  toToutiao:function(){
+    wx.navigateTo({
+      url: '../toutiao/index'
+    })
+  },
+  toJoke:function(){
+    wx.navigateTo({
+      url: '../joke/index'
+    })
+  },
+  toRank:function(){
+    wx.navigateTo({
+      url: '../rank/index'
+    })
+  },
+  toDream:function(){
+    wx.navigateTo({
+      url: '../dream/index'
+    })
+  },
+  toMobile:function(){
+    wx.navigateTo({
+      url: '../mobile/index'
+    })
+  },
+  toConstellation:function(){
+    wx.navigateTo({
+      url: '../constellation/index'
+    })
+  },
+  toFinance:function(){
+    wx.navigateTo({
+      url: '../finance/index'
+    })
   }
 })

@@ -5,14 +5,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    newsList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var _self = this;
+    wx.request({
+      url: 'https://v.juhe.cn/toutiao/index',
+      data: {
+        key: '8d9af834b7b4fbf0884737ffba94f7cf'
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: (res) => {
+        if (res.data && res.statusCode == 200) {
+          console.log(res.data.result.data)
+          _self.setData({
+            newsList: res.data.result.data
+          })
+        }
+      }
+    })
   },
 
   /**

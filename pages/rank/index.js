@@ -19,7 +19,25 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    var _self = this;
+    wx.request({
+      url: 'https://japi.juhe.cn/rank/getRankType',
+      data: {
+        key: '0514c74afc2998fe4377592c2c45bb77'
+       
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: (res) => {
+        if (res.data && res.statusCode == 200) {
+          console.log(res.data.result)
+          // _self.setData({
+          //   jokeList: res.data.result.data
+          // })
+        }
+      }
+    })
   },
 
   /**
