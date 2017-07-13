@@ -1,2 +1,31 @@
 <!--index.wxml-->
-<text>index.wxml</text>
+<view class="container">
+  <view class="title">{{title}}</view>
+  <view class="header">
+    <view class="day">{{day}}</view>
+    <view class="lunar">农历{{lunar}}</view>
+    <view class="lunaryear">{{lunarYear}}</view>
+    <view class="animalsyear">[{{animalsYear}}年]</view>
+  </view>
+  <view class="sa">
+    <view class="suit">
+      <view class="sa-title">宜</view>
+      <view class="sa-con">
+       <text class="item" wx:for="{{suit}}" wx:if="{{item}}">{{item}}</text>
+      </view>
+    </view>
+    <view class="avoid">
+      <view class="sa-title">忌</view>
+      <view class="sa-con">
+       <text class="item" wx:for="{{avoid}}" wx:if="{{item}}">{{item}}</text>
+      </view>
+    </view>
+  </view>
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
+</view>
+
+
