@@ -20,6 +20,8 @@ Page({
    */
   onReady: function () {
     var _self = this;
+    var timeStr = Date.parse(new Date())/1000;
+
     wx.request({
       url: 'https://japi.juhe.cn/joke/content/list.from',
       data: {
@@ -27,7 +29,7 @@ Page({
         sort:'desc',
         page:1,
         pagesize:20,
-        time: 1418816972
+        time: timeStr
       },
       header: {
         'content-type': 'application/json'

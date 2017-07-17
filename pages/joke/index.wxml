@@ -1,7 +1,9 @@
 <!--index.wxml-->
-<view>
-  <view  wx:for="{{jokeList}}" class="item" wx:key="index">
-      <view>{{item.content}}</view>
-      <view>{{item.updatetime}}</view>
+<view style="text-align:center">笑话</view>
+<scroll-view class="scroll-con" scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="item" wx:for="{{jokeList}}" wx:key="index">
+      <view class="content">{{item.content}}</view>
+      <!-- <view class="time">{{item.updatetime}}</view> -->
   </view>
-</view>
+</scroll-view>
+
