@@ -9,14 +9,19 @@
       <image style="width:30px;height:50px" mode="" src="/image/icon/bus.png"></image>
       <text>实时公交</text>
     </view>
-    <view class="flex-item" bindtap="toWeipiao">
-      <image style="width:30px;height:50px" mode="" src="/image/icon/wepiao.png"></image>
-      <text>在线电影票</text>
-    </view>
     <view class="flex-item" bindtap="toCalendar">
       <image style="width:30px;height:50px" mode="" src="/image/icon/calendar.png"></image>
       <text>万年历</text>
     </view>
+     <view class="flex-item" bindtap="toJoke">
+      <image style="width:30px;height:50px" mode="" src="/image/icon/joke.png"></image>
+      <text>笑话大全</text>
+    </view>
+    <view class="flex-item" bindtap="toWeipiao">
+      <image style="width:30px;height:50px" mode="" src="/image/icon/wepiao.png"></image>
+      <text>在线电影票</text>
+    </view>
+    
      <view class="flex-item" bindtap="toNBA">
       <image style="width:30px;height:50px" mode="" src="/image/icon/nba.png"></image>
       <text>NBA赛事</text>
@@ -37,10 +42,7 @@
       <image style="width:30px;height:50px" mode="" src="/image/icon/toutiao.png"></image>
       <text>新闻头条</text>
     </view>
-    <view class="flex-item" bindtap="toJoke">
-      <image style="width:30px;height:50px" mode="" src="/image/icon/joke.png"></image>
-      <text>笑话大全</text>
-    </view>
+   
     <view class="flex-item" bindtap="toRank">
       <image style="width:30px;height:50px" mode="" src="/image/icon/rank.png"></image>
       <text>数字阅读</text>
