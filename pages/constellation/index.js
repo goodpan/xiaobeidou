@@ -18,7 +18,7 @@ Page({
   onLoad: function (options) {
     var _self = this;
     wx.request({
-      url: 'http://www.admin-tp.com/weixin/mp/constellation',
+      url: 'http://www.goodpan.cn/api/xcx/constellation',
       data: _self.data.reqData,
       header: {
         'content-type': 'application/json'

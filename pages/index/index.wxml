@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <view class="container">
+  <view class="session-title">出行</view>
   <view class="flex-wrp">
     <view class="flex-item" bindtap="toWifi">
         <image style="width:30px;height:50px" mode="" src="/image/icon/wifi.png"></image>
@@ -9,10 +10,41 @@
       <image style="width:30px;height:50px" mode="" src="/image/icon/bus.png"></image>
       <text>实时公交</text>
     </view>
+  </view>
+  <view class="session-title">速查</view>
+  <view class="flex-wrp">
     <view class="flex-item" bindtap="toCalendar">
       <image style="width:30px;height:50px" mode="" src="/image/icon/calendar.png"></image>
       <text>万年历</text>
     </view>
+     <view class="flex-item" bindtap="toConstellation">
+      <image style="width:30px;height:50px" mode="" src="/image/icon/constellation.png"></image>
+      <text>星座运势</text>
+    </view>
+      <view class="flex-item">
+      <image style="width:30px;height:50px" mode="" src="/image/icon/laohuangli.png"></image>
+      <text>老黄历</text>
+    </view>
+  </view>
+   <view class="session-title">娱乐</view>
+  <view class="flex-wrp">
+     <view class="flex-item" bindtap="toMovie">
+      <image style="width:30px;height:50px" mode="" src="/image/icon/movie.png"></image>
+      <text>影视影讯</text>
+    </view>
+  </view>
+     <view class="session-title">学习</view>
+  <view class="flex-wrp">
+     <view class="flex-item">
+      <image style="width:30px;height:50px" mode="" src="/image/icon/chengyu.png"></image>
+      <text>成语词典</text>
+    </view>
+    <view class="flex-item">
+      <image style="width:30px;height:50px" mode="" src="/image/icon/xhzd.png"></image>
+      <text>新华字典</text>
+    </view>
+  </view>
+  <!-- <view class="flex-wrp">
      <view class="flex-item" bindtap="toJoke">
       <image style="width:30px;height:50px" mode="" src="/image/icon/joke.png"></image>
       <text>笑话大全</text>
@@ -34,10 +66,7 @@
       <image style="width:30px;height:50px" mode="" src="/image/icon/tv.png"></image>
       <text>电视节目</text>
     </view>
-    <view class="flex-item" bindtap="toMovie">
-      <image style="width:30px;height:50px" mode="" src="/image/icon/movie.png"></image>
-      <text>影视影讯</text>
-    </view>
+   
     <view class="flex-item" bindtap="toToutiao">
       <image style="width:30px;height:50px" mode="" src="/image/icon/toutiao.png"></image>
       <text>新闻头条</text>
@@ -55,10 +84,7 @@
       <image style="width:30px;height:50px" mode="" src="/image/icon/mobile.png"></image>
       <text>号码归属</text>
     </view>
-    <view class="flex-item" bindtap="toConstellation">
-      <image style="width:30px;height:50px" mode="" src="/image/icon/constellation.png"></image>
-      <text>星座运势</text>
-    </view>
+   
     <view class="flex-item">
       <image style="width:30px;height:50px" mode="" src="/image/icon/goodbook.png"></image>
       <text>图书电商</text>
@@ -83,21 +109,11 @@
       <image style="width:30px;height:50px" mode="" src="/image/icon/idcard.png"></image>
       <text>身份证查询</text>
     </view>
-    <view class="flex-item">
-      <image style="width:30px;height:50px" mode="" src="/image/icon/laohuangli.png"></image>
-      <text>老黄历</text>
-    </view>
+  
     <view class="flex-item">
       <image style="width:30px;height:50px" mode="" src="/image/icon/postcode.png"></image>
       <text>邮编查询</text>
     </view>
-    <view class="flex-item">
-      <image style="width:30px;height:50px" mode="" src="/image/icon/chengyu.png"></image>
-      <text>成语词典</text>
-    </view>
-    <view class="flex-item">
-      <image style="width:30px;height:50px" mode="" src="/image/icon/xhzd.png"></image>
-      <text>新华字典</text>
-    </view>
-  </view>
+    
+  </view> -->
 </view>

@@ -42,22 +42,28 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "iconPath": "image/icon_component.png",
-        "selectedIconPath": "image/icon_component_HL.png",
-        "text": "首页"
-      },
-      {
         "pagePath": "pages/wxjx/index",
         "iconPath": "image/icon_API.png",
         "selectedIconPath": "image/icon_API_HL.png",
         "text": "微信精选"
       },
       {
-        "pagePath": "pages/robot/index",
+        "pagePath": "pages/toutiao/index",
         "iconPath": "image/icon_API.png",
         "selectedIconPath": "image/icon_API_HL.png",
-        "text": "咨询机器人"
+        "text": "头条新闻"
+      },
+      {
+        "pagePath": "pages/joke/index",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "幽默段子"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/icon_component.png",
+        "selectedIconPath": "image/icon_component_HL.png",
+        "text": "生活导航"
       }
     ]
   }

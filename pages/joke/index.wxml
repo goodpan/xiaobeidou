@@ -1,5 +1,4 @@
 <!--index.wxml-->
-<view style="text-align:center">笑话</view>
 <scroll-view class="scroll-con" scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
   <view class="item" wx:for="{{jokeList}}" wx:key="index">
       <view class="content">{{item.content}}</view>
