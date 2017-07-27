@@ -1,1 +1,69 @@
 /* index.wxss */
+.container{
+  font-size: 14px;
+}
+.tab-date{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  background: #f5f5f5;
+}
+.cons-name{
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+.header{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.header .logo{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #f5f5f5;
+}
+.header .logo image{
+  width: 100%;
+}
+.title-list{
+    width: 60%;
+}
+.title-date{
+  color: #e23674;
+}
+.item{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 1.5; 
+  font-size: 14px
+}
+.item .name{
+  width: 40%;
+}
+.con-list{
+   padding: 10px;
+   background: #f5f5f5;
+   line-height: 2; 
+   margin: 20px 0;
+   font-size: 14px
+}
+.des{
+  padding: 0 10px;
+  
+}
+.des .title{
+  padding: 10px 0;
+  color: #e23674;
+}
+.des .con{
+  line-height: 1.5;
+}

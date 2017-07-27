@@ -5,7 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+      consData:null,
+      reqData:{
+        consName: '白羊座',
+        type: 'today'
+      }
   },
 
   /**
@@ -14,21 +18,17 @@ Page({
   onLoad: function (options) {
     var _self = this;
     wx.request({
-      url: 'https://web.juhe.cn:8080/constellation/getAll',
-      data: {
-        key: '7addf042f2c24318a581b080162cc9b6',
-        consName:'双鱼座',
-        type:'today'
-      },
+      url: 'http://www.admin-tp.com/weixin/mp/constellation',
+      data: _self.data.reqData,
       header: {
         'content-type': 'application/json'
       },
       success: (res) => {
-        if (res.data && res.statusCode == 200) {
-          console.log(res.data.result)
-          // _self.setData({
-           
-          // })
+        if(res.statusCode == 200){
+          _self.setData({
+            consData: res.data
+          })
+         
         }
       }
     })
