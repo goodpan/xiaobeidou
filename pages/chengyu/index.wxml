@@ -1,2 +1,14 @@
 <!--index.wxml-->
-<text>index.wxml</text>
+<view class="name">{{renderData.bushou}}</view>
+<view class="name">{{renderData.head}}</view>
+<view class="name">{{renderData.pinyin}}</view>
+<view class="name">{{renderData.chengyujs}}</view>
+<view class="name">{{renderData.from_}}</view>
+<view class="name">{{renderData.example}}</view>
+<view class="name">{{renderData.yufa}}</view>
+<view class="name">{{renderData.ciyujs}}</view>
+<view class="name">{{renderData.yinzhengjs}}</view>
+<view class="name">{{renderData.fanyi}}</view>
+<view class="name">
+  <text wx:for="{{renderData.tongyi}}">{{tiem}}</text>
+</view>

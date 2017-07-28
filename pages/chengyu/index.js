@@ -5,21 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+      renderData:null,
+      reqData:{
+        key:'3905a55aabd01d26547280b088c6885c',
+        word:'生龙活虎'
+      }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.fetchData();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
@@ -62,5 +66,28 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  fetchData:function(){
+    var _self = this;
+    wx.showToast({
+      title: '加载中...',
+      icon: 'loading',
+      duration: 1000
+    });
+    wx.request({
+      url: 'http://v.juhe.cn/chengyu/query',
+      data: _self.data.reqData,
+      header: {
+        'content-type': 'application/json'
+      },
+      success: (res) => {
+        if (res.data && res.statusCode == 200) {
+          _self.setData({
+            renderData: res.data.result
+          })
+        }
+        wx.hideToast();
+      }
+    })
   }
 })

@@ -3,10 +3,10 @@
   height: 100%;
 }
 .item{
-  border-bottom: 1px dashed #48C23D;
-  font-size: 16px;
-  text-indent: 2em;
-  line-height: 1.8;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 14px;
+  line-height: 2;
   margin: 0 10px;
   padding: 10px 0;
+  color: #222;
 }

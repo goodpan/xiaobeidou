@@ -1,8 +1,33 @@
 <!--index.wxml-->
-<view>
-<view></view>
-  <view  wx:for="{{newsList}}" class="item" wx:key="index">
-      <view>{{item.title}}</view>
-      <image src="{{item.thumbnail_pic_s}}"></image>
+<view class="header">
+<view class="tab">
+    <view wx:for="{{tab}}" class="tab-item">
+      <text wx:if="{{item.cn===currentTab}}" class="test on" bindtap="switchPage" data-val="{{item.name}}" data-index="{{index}}">{{item.cn}}</text>
+      <text wx:else class="text" bindtap="switchPage" data-val="{{item.name}}"  data-index="{{index}}">{{item.cn}}</text>
+    </view>
+</view>
+</view>
+<view class="container">
+  <view wx:for="{{newsList}}" class="item" wx:key="index">
+    <view wx:if="{{item.thumbnail_pic_s02}}" class="item-list">
+      <view>
+        <view class="title">{{item.title}}</view>
+        <view class="logo">
+          <image src="{{item.thumbnail_pic_s}}" mode="widthFix" wx:if="{{item.thumbnail_pic_s}}"></image>
+          <image src="{{item.thumbnail_pic_s02}}" mode="widthFix" wx:if="{{item.thumbnail_pic_s02}}"></image>
+          <image src="{{item.thumbnail_pic_s03}}" mode="widthFix" wx:if="{{item.thumbnail_pic_s03}}"></image>
+        </view>
+      </view>
+      <view class="source">{{item.author_name}}</view>
+    </view>
+      <view class="item-one" wx:else>
+        <view class="title">
+          <view>{{item.title}}</view>
+          <view class="source">{{item.author_name}}</view>
+        </view>
+        <view class="logo">
+          <image src="{{item.thumbnail_pic_s}}" mode="widthFix" wx:if="{{item.thumbnail_pic_s}}"></image>
+        </view>
+      </view>
   </view>
 </view>

@@ -1,2 +1,10 @@
 <!--index.wxml-->
-<text>index.wxml</text>
+<view class="container">
+  <view class="item" wx:for="{{renderData}}" wx:key="index">
+      <view class="title">{{item.title}}</view>
+      <view class="logo">
+         <image src=" {{item.firstImg}}" mode="widthFix" ></image>
+      </view>
+      <view class="source">来源：{{item.source}}</view>
+  </view>
+</view>

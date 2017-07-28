@@ -5,44 +5,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-    jokeList:[]
+    jokeList:[],
+    reqData:{
+      key: '8e7c1acee39a803115f259f11d876e1c',
+      sort: 'desc',
+      page: 1,
+      pagesize: 20,
+      time: Date.parse(new Date()) / 1000
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.fetchData();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    var _self = this;
-    var timeStr = Date.parse(new Date())/1000;
-
-    wx.request({
-      url: 'https://japi.juhe.cn/joke/content/list.from',
-      data: {
-        key: '8e7c1acee39a803115f259f11d876e1c',
-        sort:'desc',
-        page:1,
-        pagesize:20,
-        time: timeStr
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      success: (res) => {
-        if (res.data && res.statusCode == 200) {
-          console.log(res.data.result.data)
-          _self.setData({
-            jokeList: res.data.result.data
-          })
-        }
-      }
-    })
+    
   },
 
   /**
@@ -77,7 +61,12 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+      var data = this.data.reqData;
+      ++data.page;
+      this.setData({
+        reqData: data
+      });
+      this.fetchData();
   },
 
   /**
@@ -85,5 +74,23 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  fetchData:function(){
+    var _self = this;
+    wx.request({
+      url: 'https://japi.juhe.cn/joke/content/list.from',
+      data: _self.data.reqData,
+      header: {
+        'content-type': 'application/json'
+      },
+      success: (res) => {
+        if (res.data && res.statusCode == 200) {
+          console.log(res.data.result.data)
+          _self.setData({
+            jokeList: _self.data.jokeList.concat(res.data.result.data)
+          })
+        }
+      }
+    })
   }
 })

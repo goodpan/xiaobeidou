@@ -35,7 +35,7 @@
   </view>
      <view class="session-title">学习</view>
   <view class="flex-wrp">
-     <view class="flex-item">
+     <view class="flex-item" bindtap="toChengYu">
       <image style="width:30px;height:50px" mode="" src="/image/icon/chengyu.png"></image>
       <text>成语词典</text>
     </view>

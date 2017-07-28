@@ -1,1 +1,81 @@
 /* index.wxss */
+.header{
+  background: #f4f5f6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.tab{
+  overflow: hidden;
+  overflow-x: scroll;
+  padding: 0 10px;
+  -webkit-overflow-scrolling: touch; 
+  white-space: nowrap;
+}
+.tab::-webkit-scrollbar{
+   width: 0; 
+}
+.tab .tab-item{
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 20px 0 0;
+}
+.tab .tab-item .on{
+  color: #f85959;
+}
+.container{
+  padding: 10px;
+  margin-top: 30px;
+}
+.item:not(:last-child){
+  border-bottom: 1px solid #f5f5f5;
+}
+.item .title{
+  padding: 10px 0;
+  line-height: 1.5;
+  font-size: 14px;
+  color: #222;
+  font-weight: 400;
+}
+.item .logo{
+  display: flex;
+  display: -webkit-flex;
+}
+.item .source{
+  font-size: 12px;
+  color: #aaa;
+  padding: 10px 0;
+}
+.item-list .logo image{
+  width: 33%;
+  margin-right: 2px;
+}
+.item-list{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+}
+.item-one{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.item-one .title{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.item-one .source{
+  padding: 0;
+}
+.item-one .logo{
+  padding: 10px 0 10px 10px;
+}
+.item-one .logo image{
+  width: 120px;
+}

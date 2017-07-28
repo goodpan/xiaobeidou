@@ -102,5 +102,10 @@ Page({
     wx.navigateTo({
       url: '../finance/index'
     })
+  },
+  toChengYu:function(){
+    wx.navigateTo({
+      url: '../chengyu/index'
+    })
   }
 })

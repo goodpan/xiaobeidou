@@ -5,14 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+      renderData:[],
+      reqData:{
+        key: '336d03e11ceaded0dbac54d1766a45b7',
+        pno: 1,
+        ps: 10
+      }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.fetchData()
   },
 
   /**
@@ -40,7 +45,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
@@ -54,7 +59,12 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+      var data = this.data.reqData;
+      ++data.pno;
+      this.setData({
+        reqData:data
+      })
+      this.fetchData()
   },
 
   /**
@@ -62,5 +72,22 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  fetchData(){
+      var _self = this;
+      wx.request({
+        url: 'http://v.juhe.cn/weixin/query',
+        data: _self.data.reqData,
+        header: {
+          'content-type': 'application/json'
+        },
+        success: (res) => {
+          if (res.data && res.statusCode == 200) {
+            _self.setData({
+              renderData: _self.data.renderData.concat(res.data.result.list)
+            })
+          }
+        }
+      })
   }
 })

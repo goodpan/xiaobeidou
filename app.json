@@ -1,13 +1,13 @@
 {
   "pages": [
+    "pages/toutiao/index",
+    "pages/wxjx/index",
     "pages/index/index",
     "pages/logs/logs",
     "pages/news/index",
     "pages/robot/index",
-    "pages/wxjx/index",
     "pages/bus/index",
     "pages/calendar/index",
-    "pages/toutiao/index",
     "pages/joke/index",
     "pages/nba/index",
     "pages/football/index",
@@ -42,28 +42,29 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/wxjx/index",
-        "iconPath": "image/icon_API.png",
-        "selectedIconPath": "image/icon_API_HL.png",
-        "text": "微信精选"
-      },
-      {
         "pagePath": "pages/toutiao/index",
         "iconPath": "image/icon_API.png",
         "selectedIconPath": "image/icon_API_HL.png",
-        "text": "头条新闻"
+        "text": "头条"
       },
+      {
+        "pagePath": "pages/wxjx/index",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "精选"
+      },
+     
       {
         "pagePath": "pages/joke/index",
         "iconPath": "image/icon_API.png",
         "selectedIconPath": "image/icon_API_HL.png",
-        "text": "幽默段子"
+        "text": "段子"
       },
       {
         "pagePath": "pages/index/index",
         "iconPath": "image/icon_component.png",
         "selectedIconPath": "image/icon_component_HL.png",
-        "text": "生活导航"
+        "text": "查一查"
       }
     ]
   }
