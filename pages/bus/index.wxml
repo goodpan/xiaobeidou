@@ -1,9 +1,8 @@
 <!--index.wxml-->
-<view>
-  <view class="section">
-  <input placeholder="请输入公交路线" auto-focus bindchange="bindChange"/>
-  <button bindtap="toSearch">查询</button>
+<view class="section search">
+  <input placeholder="输入公交路线查询" type="text" confirm-type="search" bindconfirm="bindSearch" placeholder-style="font-size:14px;padding-left:10px;" style="padding-left:10px;"/>
 </view>
+<view>
   <view  wx:for="{{busList}}" class="item" wx:key="item.id">
       <view class="intro">{{item.key_name}}路{{item.front_name}}-{{item.terminal_name}}</view>
       <view wx:for="{{item.stationdes}}" class="item" wx:key="item.stationNum">

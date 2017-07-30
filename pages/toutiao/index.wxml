@@ -8,7 +8,7 @@
 </view>
 </view>
 <view class="container">
-  <view wx:for="{{newsList}}" class="item" wx:key="index">
+  <navigator  wx:for="{{newsList}}" class="item" wx:key="index" url="/pages/toutiao/detail?url={{item.url}}" class="item" hover-class="navigator-hover">
     <view wx:if="{{item.thumbnail_pic_s02}}" class="item-list">
       <view>
         <view class="title">{{item.title}}</view>
@@ -29,5 +29,5 @@
           <image src="{{item.thumbnail_pic_s}}" mode="widthFix" wx:if="{{item.thumbnail_pic_s}}"></image>
         </view>
       </view>
-  </view>
+  </navigator>
 </view>

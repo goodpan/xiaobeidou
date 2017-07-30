@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/switchcity/switchcity",
+    "pages/index/index",
     "pages/toutiao/index",
     "pages/wxjx/index",
-    "pages/index/index",
     "pages/logs/logs",
     "pages/news/index",
     "pages/robot/index",
@@ -27,7 +28,10 @@
     "pages/postcode/index",
     "pages/chengyu/index",
     "pages/xhzd/index",
-    "pages/wepiao/index"
+    "pages/wepiao/index",
+    "pages/constellations/index",
+    "pages/toutiao/detail",
+    "pages/wxjx/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -53,12 +57,11 @@
         "selectedIconPath": "image/icon_API_HL.png",
         "text": "精选"
       },
-     
       {
         "pagePath": "pages/joke/index",
         "iconPath": "image/icon_API.png",
         "selectedIconPath": "image/icon_API_HL.png",
-        "text": "段子"
+        "text": "幽默"
       },
       {
         "pagePath": "pages/index/index",

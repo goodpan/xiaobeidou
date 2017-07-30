@@ -8,7 +8,7 @@ Page({
     busList:[],
     bus:0
   },
-  bindChange: function (e) {
+  bindSearch: function (e) {
     this.setData({
       bus: e.detail.value
     })
@@ -56,7 +56,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    console.log(options.city)
   },
 
   /**

@@ -1,50 +1,218 @@
 <!--index.wxml-->
 <view class="container">
     <view class="tab-date">
-      <text>今日</text>
-      <text>明日</text>
-      <text>本周</text>
-      <text>下周</text>
-      <text>本月</text>
-      <text>本年</text>
-    </view>
-    <view class="cons-name">
-      <text>{{consData.name}}</text>
-    </view>
-    <view class="header">
-      <view class="logo">
-        <image src="../../image/xz/1.png" mode="widthFix"></image>
-      </view>
-      <view class="title-list">
-          <view class="item title-date">{{consData.datetime}}运势</view>
-         <view class="item">
-          <view class="name">综合指数</view>
-            <view class="value">{{consData.all}}</view>
-          </view>
-          <view class="item">
-            <view class="name">健康指数</view>
-              <view class="value">{{consData.health}}</view>
-          </view>
-          <view class="item">
-            <view class="name">爱情指数</view>
-            <view class="value">{{consData.love}}</view>
-          </view>
-          <view class="item">
-            <view class="name">工作指数</view>
-            <view class="value">{{consData.work}}</view>
-          </view>
-          <view class="item">
-            <view class="name">财运指数</view>
-            <view class="value">{{consData.money}}</view>
-          </view>
+      <!-- <text wx:for="{{tabData}}" bindtap="switchTab">{{item.text}}</text> -->
+      <view wx:for="{{tabData}}" class="tab-item">
+        <text wx:if="{{item.type===reqData.type}}" class="test on" bindtap="switchTab" data-val="{{item.type}}" data-index="{{index}}">{{item.text}}</text>
+        <text wx:else class="text" bindtap="switchTab" data-val="{{item.type}}"  data-index="{{index}}">{{item.text}}</text>
       </view>
     </view>
-    <view class="con-list">
-          <view class="name">幸运数字:{{consData.number}}</view>
-          <view class="value">速配星座:{{consData.QFriend}}</view>
+    <view class="tab-content" wx:if="{{reqData.type==='today'}}">
+      <view class="cons-name">
+        <text>{{renderData.name}}</text>
+      </view>
+      <view class="title-date">{{renderData.datetime}}运势</view>
+      <view class="header">
+        <view class="logo">
+          <image src="../../image/xz/1.png" mode="widthFix"></image>
+        </view>
+        <view class="title-list">
+            
+          <view class="item">
+            <view class="name">综合指数</view>
+              <view class="value">{{renderData.all}}</view>
+            </view>
+            <view class="item">
+              <view class="name">健康指数</view>
+                <view class="value">{{renderData.health}}</view>
+            </view>
+            <view class="item">
+              <view class="name">爱情指数</view>
+              <view class="value">{{renderData.love}}</view>
+            </view>
+            <view class="item">
+              <view class="name">工作指数</view>
+              <view class="value">{{renderData.work}}</view>
+            </view>
+            <view class="item">
+              <view class="name">财运指数</view>
+              <view class="value">{{renderData.money}}</view>
+            </view>
+        </view>
+      </view>
+      <view class="con-list">
+            <view class="name">幸运数字:  {{renderData.number}}</view>
+            <view class="value">速配星座:  {{renderData.QFriend}}</view>
+            <view class="color">幸运色：  {{renderData.color}}</view>
+      </view>
+      <view class="des">
+            <view class="title">今日概述</view>
+            <view class="con">{{renderData.summary}}</view>
+      </view>
     </view>
-    <view class="des">
-          <view class="title">今日概述</view>
-          <view class="con">{{consData.summary}}</view>
+    <view class="tab-content" wx:if="{{reqData.type==='tomorrow'}}">
+      <view class="cons-name">
+        <text>{{renderData.name}}</text>
+      </view>
+      <view class="title-date">{{renderData.datetime}}运势</view>
+      <view class="header">
+        <view class="logo">
+          <image src="../../image/xz/1.png" mode="widthFix"></image>
+        </view>
+        <view class="title-list">
+          <view class="item">
+            <view class="name">综合指数</view>
+              <view class="value">{{renderData.all}}</view>
+            </view>
+            <view class="item">
+              <view class="name">健康指数</view>
+                <view class="value">{{renderData.health}}</view>
+            </view>
+            <view class="item">
+              <view class="name">爱情指数</view>
+              <view class="value">{{renderData.love}}</view>
+            </view>
+            <view class="item">
+              <view class="name">工作指数</view>
+              <view class="value">{{renderData.work}}</view>
+            </view>
+            <view class="item">
+              <view class="name">财运指数</view>
+              <view class="value">{{renderData.money}}</view>
+            </view>
+        </view>
+      </view>
+      <view class="con-list">
+            <view class="name">幸运数字:  {{renderData.number}}</view>
+            <view class="value">速配星座:  {{renderData.QFriend}}</view>
+            <view class="color">幸运色：  {{renderData.color}}</view>
+      </view>
+      <view class="des">
+            <view class="title">明日概述</view>
+            <view class="con">{{renderData.summary}}</view>
+      </view>
+    </view>
+    <view class="tab-content" wx:if="{{reqData.type==='week'}}">
+      <view class="cons-name">
+        <text>{{renderData.name}}</text>
+      </view>
+      <view class="header-week">
+        <view class="logo">
+          <image src="../../image/xz/1.png" mode="widthFix"></image>
+        </view>
+        <view class="title">{{renderData.date}}运势</view>
+        <view class="weekth">第{{renderData.weekth}}周</view>
+      </view>
+       <view class="des">
+            <view class="title">爱情运势</view>
+            <view class="con">{{renderData.love}}</view>
+      </view>
+      <view class="des">
+            <view class="title">健康运势</view>
+            <view class="con">{{renderData.health}}</view>
+      </view>
+      <view class="des">
+            <view class="title">工作运势</view>
+            <view class="con">{{renderData.job}}</view>
+      </view>
+      <view class="des">
+            <view class="title">事业运势</view>
+            <view class="con">{{renderData.work}}</view>
+      </view>
+      <view class="des">
+            <view class="title">财富运势</view>
+            <view class="con">{{renderData.money}}</view>
+      </view>
+    </view>
+    <view class="tab-content" wx:if="{{reqData.type==='nextweek'}}">
+      <view class="cons-name">
+        <text>{{renderData.name}}</text>
+      </view>
+      <view class="header-week">
+        <view class="logo">
+          <image src="../../image/xz/1.png" mode="widthFix"></image>
+        </view>
+        <view class="title">{{renderData.date}}运势</view>
+        <view class="weekth">第{{renderData.weekth}}周</view>
+      </view>
+       <view class="des">
+            <view class="title">爱情运势</view>
+            <view class="con">{{renderData.love}}</view>
+      </view>
+      <view class="des">
+            <view class="title">健康运势</view>
+            <view class="con">{{renderData.health}}</view>
+      </view>
+      <view class="des">
+            <view class="title">工作运势</view>
+            <view class="con">{{renderData.job}}</view>
+      </view>
+      <view class="des">
+            <view class="title">事业运势</view>
+            <view class="con">{{renderData.work}}</view>
+      </view>
+      <view class="des">
+            <view class="title">财富运势</view>
+            <view class="con">{{renderData.money}}</view>
+      </view>
+    </view>
+    <view class="tab-content" wx:if="{{reqData.type==='month'}}">
+      <view class="cons-name">
+        <text>{{renderData.name}}</text>
+      </view>
+      <view class="header-week">
+        <view class="logo">
+          <image src="../../image/xz/1.png" mode="widthFix"></image>
+        </view>
+        <view class="title">{{renderData.date}}运势</view>
+      </view>
+       <view class="des">
+            <view class="title">综合运势</view>
+            <view class="con">{{renderData.all}}</view>
+      </view>
+      <view class="des">
+            <view class="title">健康运势</view>
+            <view class="con">{{renderData.health}}</view>
+      </view>
+      <view class="des">
+            <view class="title">爱情运势</view>
+            <view class="con">{{renderData.love}}</view>
+      </view>
+      <view class="des">
+            <view class="title">工作运势</view>
+            <view class="con">{{renderData.work}}</view>
+      </view>
+      <view class="des">
+            <view class="title">财富运势</view>
+            <view class="con">{{renderData.money}}</view>
+      </view>
+    </view>
+    <view class="tab-content" wx:if="{{reqData.type==='year'}}">
+      <view class="cons-name">
+        <text>{{renderData.name}}</text>
+      </view>
+      <view class="header-week">
+        <view class="logo">
+          <image src="../../image/xz/1.png" mode="widthFix"></image>
+        </view>
+        <view class="title">{{renderData.date}}运势</view>
+      </view>
+      <view class="des">
+            <view class="title">年度密码</view>
+            <view class="meta">{{renderData.mima.info}}</view>
+            <view class="con" wx:for="{{renderData.mima.text}}">{{item}}</view>
+      </view>
+      <view class="des">
+            <view class="title">事业运势</view>
+            <view class="con" wx:for="{{renderData.career}}">{{item}}</view>
+      </view>
+      <view class="des">
+            <view class="title">感情运势</view>
+            <view class="con" wx:for="{{renderData.love}}">{{item}}</view>
+      </view>
+      <view class="des">
+            <view class="title">财富运势</view>
+            <view class="con" wx:for="{{renderData.finance}}">{{item}}</view>
+      </view>
     </view>
 </view>

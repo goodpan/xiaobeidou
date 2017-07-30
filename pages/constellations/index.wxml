@@ -1,0 +1,169 @@
+<!--index.wxml-->
+<navigator url="/pages/constellation/index?consName=白羊座" class="item" hover-class="navigator-hover">
+  <view class="logo">
+    <image src="../../image/xz/1.png" mode="widthFix"></image>
+  </view>
+  <view class="content">
+    <view class="title">
+      <text class="link">白羊座</text>
+      <text class="date">3.21-4.19</text>
+    </view>
+    <view class="des">
+      充满希望、和蔼可亲、行动力、活力充沛、诚心诚意、天生长才、勇敢
+    </view>
+  </view>
+</navigator>
+<navigator url="/pages/constellation/index?consName=金牛座" class="item" hover-class="navigator-hover">
+  <view class="logo">
+    <image src="../../image/xz/2.png" mode="widthFix"></image>
+  </view>
+  <view class="content">
+    <view class="title">
+      <text class="link">金牛座</text>
+      <text class="date">4.20-5.20</text>
+    </view>
+    <view class="des">
+      浪漫、决断能力、逻辑性思考、勤勉、灵巧、热心、忍耐心
+    </view>
+  </view>
+</navigator>
+<navigator url="/pages/constellation/index?consName=双子座" class="item" hover-class="navigator-hover">
+  <view class="logo">
+    <image src="../../image/xz/3.png" mode="widthFix"></image>
+  </view>
+  <view class="content">
+    <view class="title">
+      <text class="link">双子座</text>
+      <text class="date">5.21-6.21</text>
+    </view>
+    <view class="des">
+      多样性、洞察力、开朗、反映机智、演技佳、宽大、魅力，善变
+    </view>
+  </view>
+</navigator>
+<navigator url="/pages/constellation/index?consName=巨蟹座" class="item" hover-class="navigator-hover">
+  <view class="logo">
+    <image src="../../image/xz/4.png" mode="widthFix"></image>
+  </view>
+  <view class="content">
+    <view class="title">
+      <text class="link">巨蟹座</text>
+      <text class="date">6.22-7.22</text>
+    </view>
+    <view class="des">
+      第六感、主观、反应佳、想象力、慎重、执着、毅力
+    </view>
+  </view>
+</navigator>
+<navigator url="/pages/constellation/index?consName=狮子座" class="item" hover-class="navigator-hover">
+  <view class="logo">
+    <image src="../../image/xz/5.png" mode="widthFix"></image>
+  </view>
+  <view class="content">
+    <view class="title">
+      <text class="link">狮子座</text>
+      <text class="date">7.23-8.22</text>
+    </view>
+    <view class="des">
+      自尊心、慈善、权利、思考、保护他人、忠诚心、热情
+    </view>
+  </view>
+</navigator>
+<navigator url="/pages/constellation/index?consName=处女座" class="item" hover-class="navigator-hover">
+  <view class="logo">
+    <image src="../../image/xz/6.png" mode="widthFix"></image>
+  </view>
+  <view class="content">
+    <view class="title">
+      <text class="link">处女座</text>
+      <text class="date">8.23-9.22</text>
+    </view>
+    <view class="des">
+      有板有眼、服务、鉴赏力、完美主义、谦虚、头脑清晰、实际
+    </view>
+  </view>
+</navigator>
+<navigator url="/pages/constellation/index?consName=天秤座" class="item" hover-class="navigator-hover">
+  <view class="logo">
+    <image src="../../image/xz/7.png" mode="widthFix"></image>
+  </view>
+  <view class="content">
+    <view class="title">
+      <text class="link">天秤座</text>
+      <text class="date">9.23-10.23</text>
+    </view>
+    <view class="des">
+      理想主义、公正、追求、社交手腕强、审美观、魅力、 艺术力强、美丽、善良
+    </view>
+  </view>
+</navigator>
+<navigator url="/pages/constellation/index?consName=天蝎座" class="item" hover-class="navigator-hover">
+  <view class="logo">
+    <image src="../../image/xz/8.png" mode="widthFix"></image>
+  </view>
+  <view class="content">
+    <view class="title">
+      <text class="link">天蝎座</text>
+      <text class="date">10.24-11.22</text>
+    </view>
+    <view class="des">
+      神秘、逻辑决断能力、理性、独立、直觉、规律、奉献、观察力 、真正魅力、冥想
+    </view>
+  </view>
+</navigator>
+<navigator url="/pages/constellation/index?consName=射手座" class="item" hover-class="navigator-hover">
+  <view class="logo">
+    <image src="../../image/xz/9.png" mode="widthFix"></image>
+  </view>
+  <view class="content">
+    <view class="title">
+      <text class="link">射手座</text>
+      <text class="date">11.23-12.21</text>
+    </view>
+    <view class="des">
+      理性、勇敢、细心、发展力、活泼、廉耻心、热心 ，可爱
+    </view>
+  </view>
+</navigator>
+<navigator url="/pages/constellation/index?consName=摩羯座" class="item" hover-class="navigator-hover">
+  <view class="logo">
+    <image src="../../image/xz/10.png" mode="widthFix"></image>
+  </view>
+  <view class="content">
+    <view class="title">
+      <text class="link">摩羯座</text>
+      <text class="date">12.22-1.19</text>
+    </view>
+    <view class="des">
+      优越、聪明、实际、野心、可靠、不屈不挠、宽大 、乐观
+    </view>
+  </view>
+</navigator>
+<navigator url="/pages/constellation/index?consName=水瓶座" class="item" hover-class="navigator-hover">
+  <view class="logo">
+    <image src="../../image/xz/11.png" mode="widthFix"></image>
+  </view>
+  <view class="content">
+    <view class="title">
+      <text class="link">水瓶座</text>
+      <text class="date">1.20-2.18</text>
+    </view>
+    <view class="des">
+      独创力、宽容、理想、先见之明、友爱、慈善、独立
+    </view>
+  </view>
+</navigator>
+<navigator url="/pages/constellation/index?consName=双鱼座" class="item" hover-class="navigator-hover">
+  <view class="logo">
+    <image src="../../image/xz/12.png" mode="widthFix"></image>
+  </view>
+  <view class="content">
+    <view class="title">
+      <text class="link">双鱼座</text>
+      <text class="date">2.19-3.20</text>
+    </view>
+    <view class="des">
+      自觉、唯美的、柏拉图式的爱、幻想、牺牲奉献、 善良、好脾气
+    </view>
+  </view>
+</navigator>

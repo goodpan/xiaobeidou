@@ -1,14 +1,52 @@
 <!--index.wxml-->
-<view class="name">{{renderData.bushou}}</view>
-<view class="name">{{renderData.head}}</view>
-<view class="name">{{renderData.pinyin}}</view>
-<view class="name">{{renderData.chengyujs}}</view>
-<view class="name">{{renderData.from_}}</view>
-<view class="name">{{renderData.example}}</view>
-<view class="name">{{renderData.yufa}}</view>
-<view class="name">{{renderData.ciyujs}}</view>
-<view class="name">{{renderData.yinzhengjs}}</view>
-<view class="name">{{renderData.fanyi}}</view>
-<view class="name">
-  <text wx:for="{{renderData.tongyi}}">{{tiem}}</text>
+<view class="section search">
+  <input placeholder="输入成语查询" type="text" confirm-type="search" bindconfirm="bindSearch" placeholder-style="font-size:14px;padding-left:10px;" style="padding-left:10px;"/>
 </view>
+
+<view class="result" wx:if="{{renderData}}">
+   <view class="title" wx:if="{{reqData.word&&reqData.word!=='100'}}">
+    {{reqData.word}}
+  </view>
+  <view class="item" wx:if="{{renderData.pinyin}}">
+    <text class="key">[拼音]</text>
+    <text class="val">{{renderData.pinyin}}</text>
+  </view>
+  <view class="item" wx:if="{{renderData.yufa}}">
+    <text class="key">[语法]</text>
+    <text class="val">{{renderData.yufa}}</text>
+  </view>
+  <view class="item" wx:if="{{renderData.from_}}">
+    <text class="key">[出自]</text>
+    <text class="val">{{renderData.from_}}</text>
+  </view>
+   <view class="item" wx:if="{{renderData.chengyujs}}">
+    <text class="key">[释义]</text>
+    <text class="val">{{renderData.chengyujs}}</text>
+  </view>
+  <view class="item" wx:if="{{renderData.yinzhengjs}}">
+    <text class="key">[解释]</text>
+    <text class="val">{{renderData.yinzhengjs}}</text>
+  </view>
+  <view class="item" wx:if="{{renderData.example}}">
+    <text class="key">[示例]</text>
+    <text class="val">{{renderData.example}}</text>
+  </view>
+  <view class="item" wx:if="{{renderData.ciyujs}}">
+    <text class="key">[英文]</text>
+    <text class="val">{{renderData.ciyujs}}</text>
+  </view>
+  <view class="item" wx:if="{{renderData.fanyi}}">
+    <text class="key">[反义]</text>
+    <text wx:for="{{renderData.fanyi}}" wx:if="{{item}}" class="word" bindtap="switchWord" data-word="{{item}}">{{item}}</text>
+  </view>
+  <view class="item" wx:if="{{renderData.tongyi}}">
+    <text class="key">[同义]</text>
+    <text wx:for="{{renderData.tongyi}}" wx:if="{{item}}" class="word" bindtap="switchWord" data-word="{{item}}">{{item}}</text>
+  </view>
+</view>
+
+<view class="result" wx:else style="text-align:center;color:#ff0000">
+  查询不到该成语的相关信息！
+</view>
+
+

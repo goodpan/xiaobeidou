@@ -1,0 +1,37 @@
+/* detail.wxss */
+@import "/wxParse/wxParse.wxss";
+.J-article{
+  margin: 10px;
+}
+.J-article .title{
+  font-size: 20px;
+  line-height: 1.5;
+}
+.J-article .src{
+  font-size: 12px;
+  color: #999;
+}
+.J-article .article-src-time{
+  border-bottom: 1px solid #f5f5f5;
+  padding: 10px 0;
+}
+.J-article .wxParse-h1{
+  margin: 0;
+}
+.J-article .J-article-content{
+  font-size: 15px;
+  line-height: 1.8;
+}
+.J-article .txt{
+  margin-top: 10px;
+}
+/* .J-article .img + .txt{
+  font-size:13px;
+  color:#999;
+  text-align:center;
+  margin-top:0;
+} */
+.J-article .img{
+  text-align: center;
+  padding: 20px 0;
+}

@@ -9,6 +9,16 @@
   justify-content: space-between;
   padding: 10px;
   background: #f5f5f5;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.tab-content{
+  margin-top: 40px;
+}
+.tab-item .on{
+  color: #f85959;
 }
 .cons-name{
   text-align: center;
@@ -34,9 +44,15 @@
 }
 .title-list{
     width: 60%;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .title-date{
   color: #e23674;
+  text-align: center;
+  margin-bottom: 20px;
 }
 .item{
   display: flex;
@@ -54,7 +70,11 @@
    background: #f5f5f5;
    line-height: 2; 
    margin: 20px 0;
-   font-size: 14px
+   font-size: 14px;
+   display: flex;
+   display: -webkit-flex;
+   flex-direction: row;
+   justify-content: space-between;
 }
 .des{
   padding: 0 10px;
@@ -66,4 +86,31 @@
 }
 .des .con{
   line-height: 1.5;
+}
+.des .meta{
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 10px;
+}
+.header-week{
+  text-align: center;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f5f5f5;
+}
+.header-week .logo{
+  width: 150px;
+  border-radius: 50%;
+  background: #f5f5f5;
+}
+.header-week .logo image{
+  width: 100%;
+}
+.header-week .title{
+  color: #f85959;
+  padding: 10px 0;
 }

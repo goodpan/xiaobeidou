@@ -5,10 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-      renderData:null,
+      renderData:[],
       reqData:{
         key:'3905a55aabd01d26547280b088c6885c',
-        word:'生龙活虎'
+        word:'100'
       }
   },
 
@@ -16,7 +16,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.fetchData();
+    // this.fetchData();
   },
 
   /**
@@ -67,6 +67,30 @@ Page({
   onShareAppMessage: function () {
   
   },
+  bindSearch:function(e){
+    var data = this.data.reqData;
+    data.word = e.detail.value;
+    this.setData({
+      reqData: data
+    });
+    this.fetchData();
+  },
+  bindKeyInput: function (e) {
+    var data = this.data.reqData;
+    data.word = e.detail.value;
+    this.setData({
+      reqData: data
+    })
+  },
+  switchWord:function(e){
+    var word = e.target.dataset.word;
+    var data = this.data.reqData;
+    data.word = word;
+    this.setData({
+      reqData:data
+    });
+    this.fetchData();
+  },
   fetchData:function(){
     var _self = this;
     wx.showToast({
@@ -83,7 +107,8 @@ Page({
       success: (res) => {
         if (res.data && res.statusCode == 200) {
           _self.setData({
-            renderData: res.data.result
+            renderData: res.data.result,
+            isInit:false
           })
         }
         wx.hideToast();

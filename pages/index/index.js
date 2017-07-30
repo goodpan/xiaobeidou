@@ -95,7 +95,7 @@ Page({
   },
   toConstellation:function(){
     wx.navigateTo({
-      url: '../constellation/index'
+      url: '../constellations/index'
     })
   },
   toFinance:function(){

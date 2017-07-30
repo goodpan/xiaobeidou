@@ -21,28 +21,28 @@
       <image style="width:30px;height:50px" mode="" src="/image/icon/constellation.png"></image>
       <text>星座运势</text>
     </view>
-      <view class="flex-item">
+    <!-- <view class="flex-item">
       <image style="width:30px;height:50px" mode="" src="/image/icon/laohuangli.png"></image>
       <text>老黄历</text>
-    </view>
+    </view> -->
   </view>
-   <view class="session-title">娱乐</view>
+  <!-- <view class="session-title">娱乐</view>
   <view class="flex-wrp">
      <view class="flex-item" bindtap="toMovie">
       <image style="width:30px;height:50px" mode="" src="/image/icon/movie.png"></image>
       <text>影视影讯</text>
     </view>
-  </view>
+  </view> -->
      <view class="session-title">学习</view>
   <view class="flex-wrp">
      <view class="flex-item" bindtap="toChengYu">
       <image style="width:30px;height:50px" mode="" src="/image/icon/chengyu.png"></image>
       <text>成语词典</text>
     </view>
-    <view class="flex-item">
+    <!-- <view class="flex-item">
       <image style="width:30px;height:50px" mode="" src="/image/icon/xhzd.png"></image>
       <text>新华字典</text>
-    </view>
+    </view> -->
   </view>
   <!-- <view class="flex-wrp">
      <view class="flex-item" bindtap="toJoke">
