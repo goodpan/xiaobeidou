@@ -1,17 +1,36 @@
 // index.js
+// 引用百度地图微信小程序JSAPI模块 
+var bmap = require('../../utils/bmap-wx.min.js');
+var wxMarkerData = []; 
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    busList:[],
-    bus:0
+    busList:null,
+    bus:0,
+    city:''
   },
   bindSearch: function (e) {
+    var bus = e.detail.value;
+    if(!bus){
+      wx.showModal({
+        title: '提示',
+        content: '请输入路线进行查询',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+      return;
+    }
     this.setData({
-      bus: e.detail.value
-    })
+      bus: bus
+    });
+    this.toSearch();
   },
   toSearch:function(){
     var _self = this;
@@ -24,7 +43,7 @@ Page({
       url: 'https://op.juhe.cn/189/bus/busline',
       data: {
         key: 'daaca038d5f6b449590459b61ef661db',
-        city: '厦门',
+        city: _self.data.city,
         bus: _self.data.bus
       },
       header: {
@@ -34,7 +53,7 @@ Page({
         wx.hideToast()
         if (res.data && res.statusCode == 200) {
           _self.setData({
-            busList: res.data.result
+            busList: res.data.result||[]
           })
         }
         if (res.data.error_code){
@@ -52,11 +71,38 @@ Page({
       }
     })
   },
+  getLoctionCity(){
+    var that = this;
+    // 新建百度地图对象 
+    var BMap = new bmap.BMapWX({
+      ak: 'I39AEjVeqKqA7t6YYi7ZkqW46gxt9aYR'
+    });
+    var fail = function (data) {
+      console.log(data)
+    };
+    var success = function (data) {
+      var city = data.originalData.result.addressComponent.city;
+      that.setData({
+        city: city
+      })
+    }
+    // 发起regeocoding检索请求 
+    BMap.regeocoding({
+      fail: fail,
+      success: success
+    }); 
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.city)
+    if(options.city){
+      this.setData({
+        city: options.city
+      })
+    }else{
+      this.getLoctionCity();
+    }
   },
 
   /**
@@ -106,5 +152,10 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  relocation:function(){
+    wx.redirectTo({
+      url: '/pages/switchcity/switchcity',
+    })
   }
 })

@@ -18,7 +18,7 @@
     <text class="hotcity hotcity-common">热门城市</text>
     <view class="weui-grids">
       <block wx:for-items="{{hotcityList}}" wx:key="{{index}}">
-        <view class="weui-grid" data-cityCode="{{item.cityCode}}" data-city="{{item.city}}" bindtap="bindHotCity" >
+        <view class="weui-grid" data-cityCode="{{item.cityCode}}" data-city="{{item.city}}" bindtap="bindCity" >
           <view class="weui-grid__label">{{item.city}}</view>
         </view>
       </block>

@@ -17,8 +17,9 @@
 .item .key{
   font-weight: 700;
   margin-right: 5px;
+  color: #48C23D;
 }
 .item .word{
   margin-right: 5px;
-  text-decoration: underline;
+  color: #48C23D;
 }

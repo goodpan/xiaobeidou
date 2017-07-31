@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/switchcity/switchcity",
     "pages/index/index",
     "pages/toutiao/index",
     "pages/wxjx/index",
@@ -31,6 +30,7 @@
     "pages/wepiao/index",
     "pages/constellations/index",
     "pages/toutiao/detail",
+    "pages/switchcity/switchcity",
     "pages/wxjx/detail"
   ],
   "window": {
@@ -67,7 +67,7 @@
         "pagePath": "pages/index/index",
         "iconPath": "image/icon_component.png",
         "selectedIconPath": "image/icon_component_HL.png",
-        "text": "查一查"
+        "text": "导航"
       }
     ]
   }

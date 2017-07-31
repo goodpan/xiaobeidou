@@ -2,12 +2,28 @@
 <view class="section search">
   <input placeholder="输入公交路线查询" type="text" confirm-type="search" bindconfirm="bindSearch" placeholder-style="font-size:14px;padding-left:10px;" style="padding-left:10px;"/>
 </view>
-<view>
-  <view  wx:for="{{busList}}" class="item" wx:key="item.id">
-      <view class="intro">{{item.key_name}}路{{item.front_name}}-{{item.terminal_name}}</view>
-      <view wx:for="{{item.stationdes}}" class="item" wx:key="item.stationNum">
-          <view>{{item.name}}</view>
+<view class="location">
+  <view class="icon">
+    <image src="../../image/location.png"></image>
+    <text class="city">{{city}}</text>
+  </view>
+  <view class="btn" bindtap="relocation">重新定位</view>
+</view>
+
+<view wx:if="{{busList.length}}" class="buslist">
+  <view wx:for="{{busList}}" class="item" wx:key="item.id">
+      <view class="intro">({{item.key_name}}路){{item.front_name}}-{{item.terminal_name}}</view>
+      <view class="list-content">
+        <view wx:for="{{item.stationdes}}" class="row" wx:key="item.stationNum">
+            <text class="num">{{item.stationNum}}</text>
+            <text class="key">{{item.name}}</text>
+        </view>
       </view>
   </view>
 </view>
+<view class="init" wx:elif="{{!bus&&!busList}}"></view>
+<view class="empty" wx:else>
+    查询不到相关信息！
+</view>
+
 
