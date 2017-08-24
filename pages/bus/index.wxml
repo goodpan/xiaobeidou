@@ -1,6 +1,27 @@
 <!--index.wxml-->
 <view class="section search">
-  <input placeholder="输入公交路线查询" type="text" confirm-type="search" bindconfirm="bindSearch" placeholder-style="font-size:14px;padding-left:10px;" style="padding-left:10px;"/>
+  <view class="tab-title">
+    <view class="con" wx:for="{{tab}}">
+      <text class="title on" wx:if="{{currentIndex===index}}" bindtap="switchTab" data-index="{{index}}">{{item.text}}</text>
+      <text class="title" wx:else bindtap="switchTab" data-index="{{index}}">{{item.text}}</text>
+    </view>
+  </view>
+  <view class="tab-content">
+      <view class="tab-item" wx:if="{{currentIndex===0}}">
+      <input placeholder="输入公交线路名称查询" type="text" confirm-type="search" bindinput="bindLineKeyInput" placeholder-style="font-size:14px;" style="padding-left:10px;"/>
+      <button type="primary" bindtap="searchByLine">线路查询</button>
+    </view>
+    <view class="tab-item" wx:if="{{currentIndex===1}}">
+      <input placeholder="输入公交站点名称查询" type="text" confirm-type="search" bindinput="bindSiteKeyInput" placeholder-style="font-size:14px;" style="padding-left:10px;"/>
+      <button type="primary" bindtap="searchBySite">站点查询</button>
+    </view>
+    <view class="tab-item" wx:if="{{currentIndex===2}}">
+      <input placeholder="请输入起点" type="text" confirm-type="search" bindinput="bindStartPointKeyInput" placeholder-style="font-size:14px;" style="padding-left:10px;"/>
+      <input placeholder="请输入终点" type="text" confirm-type="search" bindinput="bindEndPointKeyInput" placeholder-style="font-size:14px;" style="padding-left:10px;"/>
+      <button type="primary" bindtap="searchByTransfer">换乘查询</button>
+    </view>
+  </view>
+  
 </view>
 <view class="location">
   <view class="icon">

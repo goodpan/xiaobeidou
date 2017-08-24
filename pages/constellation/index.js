@@ -128,7 +128,7 @@ Page({
         'content-type': 'application/json'
       },
       success: (res) => {
-        if (res.statusCode == 200) {
+        if (res) {
           _self.setData({
             renderData: res.data
           })

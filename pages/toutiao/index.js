@@ -124,16 +124,17 @@ Page({
       duration: 1000
     });
     wx.request({
-      url: 'https://v.juhe.cn/toutiao/index',
+      url: 'http://www.goodpan.cn/api/xcx/toutiao',
       data: {
-        key: '8d9af834b7b4fbf0884737ffba94f7cf',
+        // key: '8d9af834b7b4fbf0884737ffba94f7cf',
         type:_self.data.currentType
       },
       header: {
         'content-type': 'application/json'
       },
       success: (res) => {
-        if (res.data && res.statusCode == 200) {
+        console.log(res);
+        if (res.data) {
           console.log(res.data.result.data)
           _self.setData({
             newsList: res.data.result.data

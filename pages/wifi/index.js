@@ -22,6 +22,7 @@ Page({
         var lon = res.longitude;
         wx.request({
           url: 'https://apis.juhe.cn/wifi/local',
+          // url:'http://www.goodpan.cn/api/xcx/wifi',
           data: {
             key: '957c9c834b062c702843fbf958df17ae',
             lon: lon,

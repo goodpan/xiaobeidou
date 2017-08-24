@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/toutiao/index",
+    "pages/index/index",
     "pages/wxjx/index",
     "pages/logs/logs",
     "pages/news/index",

@@ -7,7 +7,7 @@ Page({
   data: {
       renderData:[],
       reqData:{
-        key: '336d03e11ceaded0dbac54d1766a45b7',
+        // key: '336d03e11ceaded0dbac54d1766a45b7',
         pno: 1,
         ps: 10
       }
@@ -76,13 +76,13 @@ Page({
   fetchData(){
       var _self = this;
       wx.request({
-        url: 'http://v.juhe.cn/weixin/query',
+        url: 'http://www.goodpan.cn/api/xcx/jingxuan',
         data: _self.data.reqData,
         header: {
           'content-type': 'application/json'
         },
         success: (res) => {
-          if (res.data && res.statusCode == 200) {
+          if (res.data) {
             _self.setData({
               renderData: _self.data.renderData.concat(res.data.result.list)
             })

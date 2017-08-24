@@ -93,7 +93,7 @@ Page({
         'content-type': 'application/json'
       },
       success: (res) => {
-        if (res.data && res.statusCode == 200) {
+        if (res.data) {
           var article = res.data;
           WxParse.wxParse('article', 'html', article, _self, 5);
         }

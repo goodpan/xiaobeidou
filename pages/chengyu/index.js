@@ -99,7 +99,8 @@ Page({
       duration: 1000
     });
     wx.request({
-      url: 'http://v.juhe.cn/chengyu/query',
+      url: 'https://v.juhe.cn/chengyu/query',
+      // url:'http://www.goodpan.cn/api/xcx/chengyu',
       data: _self.data.reqData,
       header: {
         'content-type': 'application/json'

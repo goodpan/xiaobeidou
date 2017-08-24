@@ -7,9 +7,134 @@ Page({
    * 页面的初始数据
    */
   data: {
+    currentIndex:0,
+    linePointValue:'',
+    sitePointValue:'',
+    startPointValue:'',
+    endPointValue:'',
+    tab:[
+      {
+        text:'线路查询'
+      },
+      {
+        text: '站点查询'
+      },
+      {
+        text: '换乘查询'
+      }
+    ],
     busList:null,
     bus:0,
     city:''
+  },
+  switchTab:function(e){
+    this.setData({
+      currentIndex: e.target.dataset.index
+    })
+  },
+  bindSiteKeyInput:function(e){
+    this.setData({
+      sitePointValue: e.detail.value
+    })
+  },
+  bindLineKeyInput:function(e){
+    this.setData({
+      linePointValue: e.detail.value
+    })
+  },
+  bindEndPointKeyInput:function(e){
+    this.setData({
+      endPointValue: e.detail.value
+    })
+  },
+  bindStartPointKeyInput: function (e) {
+    this.setData({
+      startPointValue: e.detail.value
+    })
+  },
+  /**
+   * 换乘查询
+   */
+  searchByTransfer:function(){
+    var reqData = {}, url = "https://op.juhe.cn/189/bus/transfer";
+    if (!this.data.startPointValue){
+      wx.showModal({
+        title: '提示',
+        content: '请输入起点名称',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+      return;
+    }
+    if (!this.data.endPointValue) {
+      wx.showModal({
+        title: '提示',
+        content: '请输入终点名称',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+      return;
+    }
+    reqData.key = "daaca038d5f6b449590459b61ef661db";
+    reqData.city = this.data.city;
+  },
+  /**
+   * 线路查询
+   */
+  searchByLine:function(){
+    var reqData = {}, url = "https://op.juhe.cn/189/bus/busline";
+    if (!this.data.linePointValue) {
+      wx.showModal({
+        title: '提示',
+        content: '请输入线路名称',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+      return;
+    }
+    reqData.key = 'daaca038d5f6b449590459b61ef661db';
+    reqData.bus = this.data.linePointValue;
+    reqData.city = this.data.city;
+    this.toSearch(url,reqData);
+  },
+  /**
+   * 站点查询
+   */
+  searchBySite:function(){
+    var reqData = {}, url = "https://op.juhe.cn/189/bus/busline";
+    if (!this.data.sitePointValue) {
+      wx.showModal({
+        title: '提示',
+        content: '请输入站点名称',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+      return;
+    }
+    reqData.key = 'daaca038d5f6b449590459b61ef661db';
+    reqData.station = this.data.sitePointValue;
+    reqData.city = this.data.city;
+    this.toSearch(url, reqData);
   },
   bindSearch: function (e) {
     var bus = e.detail.value;
@@ -32,20 +157,16 @@ Page({
     });
     this.toSearch();
   },
-  toSearch:function(){
-    var _self = this;
+  toSearch:function(url,reqData){
+    var _self = this,_url= url || '',_reqData = reqData || {};
     wx.showToast({
       title: "加载中...",
       icon: "loading",
       duration: 5000
     })
     wx.request({
-      url: 'https://op.juhe.cn/189/bus/busline',
-      data: {
-        key: 'daaca038d5f6b449590459b61ef661db',
-        city: _self.data.city,
-        bus: _self.data.bus
-      },
+      url: _url,
+      data: _reqData,
       header: {
         'content-type': 'application/json'
       },
